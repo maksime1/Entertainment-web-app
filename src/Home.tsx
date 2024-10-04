@@ -9,7 +9,6 @@ import BookmarkImg from "../public/assets/icon-bookmark-empty.svg";
 import FullBookmarkImg from "../public/assets/icon-bookmark-full.svg";
 import { SetStateAction, useState } from "react";
 import { DesktopFlex, DesktopResponse } from "./Style";
-import Slider from "react-slick";
 
 export default function Home() {
   const movies = data.filter((movie) => movie.isTrending === false);
@@ -56,7 +55,7 @@ export default function Home() {
           <MainContainer>
             <h2>Recommended for you</h2>
             <div className="movies_container">
-              {filteredMovie.map((movie, index) => {
+              {filteredMovie.map((movie) => {
                 return (
                   <div className="each_movie" key={movie.title}>
                     <img src={movie.thumbnail.regular.small} alt="" />

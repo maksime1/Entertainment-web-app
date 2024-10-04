@@ -19,7 +19,7 @@ const schema = yup.object({
   password: yup.string().required("Can’t be empty"),
   repeatPassword: yup
     .string()
-    .oneOf([yup.ref("password"), null], "password must match")
+    .oneOf([yup.ref("password")], "password must match")
     .required("Can’t be empty"),
 });
 
